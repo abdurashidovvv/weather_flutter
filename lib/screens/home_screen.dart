@@ -54,6 +54,29 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
                   decoration: const BoxDecoration(color: Colors.transparent),
                 ),
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child:  Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "📍 Aix-en-Provence",
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.w300),
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      "Good Morning",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Image.asset('assets/2.png')
+                  ],
+                ),
               )
             ],
           ),
