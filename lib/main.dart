@@ -28,17 +28,17 @@ class MyApp extends StatelessWidget {
             if (snap.hasData) {
               return BlocProvider<WeatherBloc>(
                 create: (context) =>
-                WeatherBloc()
-                  ..add(FetchWeather()),
+                    WeatherBloc()..add(FetchWeather(snap.data as Position)),
                 child: const HomeScreen(),
               );
             } else {
               return const Scaffold(
-                body: Center(child: CircularProgressIndicator(),),
+                body: Center(
+                  child: CircularProgressIndicator(),
+                ),
               );
             }
-          }
-      ),
+          }),
     );
   }
 }
